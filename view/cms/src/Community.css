@@ -1,0 +1,54 @@
+.discover,.engagep,.payments{
+    transform: scale(0.9);
+}
+.resident-box{
+    margin: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.residents{
+    display: flex;
+    flex-wrap: wrap;
+}
+.engage{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+
+}
+.engage-element{
+    width: 27vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px;
+}
+.payment-boxp{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.payment-box{
+    width: 40vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px;
+}
+@media screen and (max-width: 800px) {
+    .payment-box{
+        width: 90vw;
+    }
+    .engage-element{
+        width: 90vw;
+    }
+    
+}
+.engage-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.rent1{
+    display: flex;
+    justify-content: space-around;
+}

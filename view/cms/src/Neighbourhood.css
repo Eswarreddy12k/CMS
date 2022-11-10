@@ -1,0 +1,33 @@
+.discussions{
+    transform: scale(0.9);
+}
+.discussion-box{
+    transform: scale(0.9);
+}
+.current-discussions button{
+    border: none;
+    background: none;
+   font-size: 25px;
+}
+.current-discussions{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.products{
+    transform: scale(0.9);
+}
+.buysell{
+    display: flex;
+}
+.buy,.sell{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+.buysell-button{
+    display: flex;
+    justify-content: center;
+    
+}

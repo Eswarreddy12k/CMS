@@ -1,0 +1,19 @@
+.modal-main {
+    
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 40vw;
+    background: white;
+    height: auto;
+    top: 30vh;
+    left: 30vw;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    
+  }
+  .modal-buttons{
+    display: flex;
+    justify-content: space-around;
+  }

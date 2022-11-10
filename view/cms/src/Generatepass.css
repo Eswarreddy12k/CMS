@@ -1,0 +1,11 @@
+#passform{
+    transform: scale(0.9);
+}
+.passbutton{
+    display: flex;
+    justify-content: center;
+}
+
+.passbox{
+    transform: scale(0.9);
+}

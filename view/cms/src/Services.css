@@ -1,0 +1,28 @@
+.hser,.tserv{
+    transform: scale(0.9);
+}
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.short-term,.long-term{
+    padding: 40px;
+    margin: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+}
+.service img{
+    height: 200px;
+}
+.service{
+    margin: 20px;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    
+}
+.tservices{
+    display: flex;
+    flex-wrap: wrap;
+}

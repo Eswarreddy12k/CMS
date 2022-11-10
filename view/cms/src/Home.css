@@ -1,0 +1,24 @@
+.announcement-box,.visitor-box,.visitorpass-box,.emergency-box{
+    margin: 20px;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.announcements,.visitors,.visitorpass,.emergency{
+    transform: scale(0.9);
+    
+}
+.visitor-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn-success{
+    width: auto;
+}
+
+.visitorpass-box button{
+    float: right;
+}
+.emergency-buttons{
+    display: flex;
+    justify-content: space-around;
+}

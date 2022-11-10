@@ -1,0 +1,10 @@
+.reply1,.reply2,.reply3{
+    padding-left: 50px;
+}
+.disc{
+    transform: scale(0.9);
+}
+.disc-button{
+    display: flex;
+    justify-content: center;
+}
