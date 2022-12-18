@@ -6,32 +6,52 @@ import { faCheckSquare, faUser } from '@fortawesome/fontawesome-free-solid'
 import Header from './Header';
 import {useState,useEffect} from 'react'
 import Footer from './Footer'
-import axios from 'axios';
+import axios, { Axios } from 'axios';
 
 
 
-function Login() {
+function Login(props) {
     const [username,setusername]=useState("")
     const [pw,setpw]=useState("")
     
     
-
+    
     const navigate = useNavigate();
     console.log('aaa')
-    function handleLogin(){
-      if(pw=='security' && username=='security'){
-        navigate('/security')
+    const handleLogin=()=>{
+      
+      
+      
+        axios.post('/homes',{
+          id:username,
+          p:pw
+        }).then((response)=>{
+          if(response.data.auth){
+            localStorage.setItem("token",response.data.token)
+            if(response.data.type==="cadmin"){
+              navigate('/admin/'+response.data.username)
+            }
+            else if(response.data.type==="admin"){
+              navigate('/headadmin')
+            }
+            else if(response.data.type==="security"){
+              navigate('/security')
+            }
+            else if(response.data.type==="manager"){
+              navigate('/manage/'+response.data.username)
+            }
+            else if(response.data.type==="user"){
+              navigate('/home/'+response.data.username)
 
-      }
-      else if(pw=='admin' && username=='admin'){
-        navigate('/admin')
-      }
-      else if(pw=='work' && username=='work'){
-        navigate('/work')
-      }
-      else{
-        navigate('/homes')
-    }
+            }
+            
+            
+          }
+        })
+
+      
+      
+      
     
     
     }
@@ -65,14 +85,14 @@ function Login() {
                 consectetur adipisicing.
               </p>
             </div>
-            <form >
+            
               <div className="form-group first">
                 <input
                   type="text"
                   className="form-control"
                   id="username"
                   name="id"
-                  placeholder="username" onChange={(e)=>{setusername(e.target.value)}}
+                  placeholder="username" onChange={(e)=>{setusername(e.target.value);}}
                 />
               </div>
               <div className="form-group last mb-4">
@@ -95,10 +115,10 @@ function Login() {
                   </a>
                 </span>
               </div>
-              <button onClick={()=>{handleLogin()}}  className="btn btn-block btn-primary" >
+              <button onClick={handleLogin}  className="btn btn-block btn-primary" >
                 Log In
               </button>
-            </form>
+            
           </div>
         </div>
       </div>

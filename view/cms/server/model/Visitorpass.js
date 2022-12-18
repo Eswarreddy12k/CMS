@@ -20,7 +20,7 @@ const VisitorSchema = new mongoose.Schema({
     owner_id:{
         type:String,
         required:true,
-        default:'11'
+        default:'1'
     }
 });
 

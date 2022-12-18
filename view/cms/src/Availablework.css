@@ -1,0 +1,10 @@
+.workcard{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.workcont{
+    display: flex;
+    flex-wrap: wrap;
+    
+}

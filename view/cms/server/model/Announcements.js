@@ -8,6 +8,10 @@ const annSchema = new mongoose.Schema({
     ann_desc:{
         type: String,
         required :true
+    },
+    ann_community:{
+        type: String,
+        required :true
     }
 });
 

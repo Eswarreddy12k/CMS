@@ -4,7 +4,8 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 import './Generatepass.css'
 
-function Generatepass() {
+function Generatepass(props) {
+  const proute='/postvisitor/'+props.cuser
   return (
     <>
     <Header />
@@ -12,7 +13,7 @@ function Generatepass() {
     <div className='passbox'>
         <h1>Generate A Pass</h1>
         <br/>
-        <form className='form-group' id='passform' action='/postvisitor' method='post'>
+        <form className='form-group' id='passform' action={proute} method='post'>
             <h3>Enter the Details to Generate a pass</h3>
             <br/>
             <input type='text' class='form-control' id='name' name='visitor_name' placeholder='Name of the Visitor'/>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Header from './Header'
 
 
@@ -17,10 +17,34 @@ import Footer from './Footer'
 
 import axios from 'axios'
 
+
  
 
-function Home() {
+function Home(props) {
+  const [log,setlog]=useState(false)
+  axios.get('/gethome',{
+    headers:{
+      "xaccesstoken":localStorage.getItem("token")
+    }}).then((response)=>{
+    if(response.data.auth){
+        setlog(true)
+    }
+    else{
+      setlog(false)
+    }
+  })
   
+
+  
+  try{
+    document.getElementById('commhome').style.backgroundColor='blue'
+  document.getElementById('commhome').style.transform='scale(1.1)'
+
+  }
+  catch{}
+  
+  const usi='111';
+  console.log(props.userid1);
   const getCustomersData = () => {
     
     axios
@@ -53,7 +77,8 @@ function Home() {
 
 
     const getvisitors=()=>{
-    axios.get("http://localhost:5000/visitorsdb").then((response)=>{const allvisitors=response.data;setvisitors(allvisitors)}).catch(error => console.log('abc'+error));
+      props.setuserid1(window.location.href.slice(27))
+    axios.get("http://localhost:5000/visitorsdb/"+window.location.href.slice(27)).then((response)=>{const allvisitors=response.data;setvisitors(allvisitors)}).catch(error => console.log('abc'+error));
     return visitors;
   }
 
@@ -61,7 +86,7 @@ function Home() {
     getann();
   },[])
   const getann=()=>{
-    axios.get("http://localhost:5000/anndb").then((response)=>{setann(response.data)}).catch(error => console.log('abc'+error));
+    axios.get("http://localhost:5000/anndb/"+window.location.href.slice(27)).then((response)=>{setann(response.data)}).catch(error => console.log('abc'+error));
   }
   useEffect(() => {
     console.log(visitors);
@@ -69,13 +94,15 @@ function Home() {
   
     
     SwiperCore.use([Autoplay])
+    if(setlog){
   return (
-    <>
     
+    <>
     <Header />
     <Navbar />
     
     <div id='homeid'>
+        
       
         <div className='announcements'>
         
@@ -162,7 +189,14 @@ function Home() {
     
     </>
     
-  )
+  )}
+  else{
+    return(
+      <>
+      <p>Access Denied</p>
+      </>
+    )
+  }
 }
 
 export default Home

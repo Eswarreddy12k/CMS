@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './Header'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import './Notifications.css'
+import axios from 'axios'
+import { useEffect } from 'react'
 
-function Notifications() {
+function Notifications(props) {
     const row=[1,1,1,1,1,1,1,1,1,1,1]
+    const [notif1,setnotif1]=useState([])
+    console.log(props.cuser)
+
+    const getusers=()=>{
+      axios.get("http://localhost:5000/getnotifications/"+props.cuser)
+      .then(data => setnotif1(data.data)).catch(error => console.log('abc'+error));
+    }
+    useEffect(() => {
+      getusers();
+    },[])
+    
+    try{
+        document.getElementById('commnotif').style.backgroundColor='blue'
+  document.getElementById('commnotif').style.transform='scale(1.1)'
+
+    }
+    catch{}
+    
+
   return (
     <>
     <Header/>
@@ -14,12 +35,12 @@ function Notifications() {
         
         <h1>Notifications</h1>
         <br/>
-        {row.map(()=>{
+        {notif1.map((dd,ii)=>{
             return(
                 <>
                 <div className='notification-box'>
-                    <h1>Notification Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ratione illo deleniti eos ex tempore inventore. Dolorum est, ad a deserunt eum ipsa fuga! Corrupti, odio esse. </p>
+                    <h1>{notif1[ii].notificationx_title}</h1>
+                    <p>{notif1[ii].notificationx_text}</p>
 
                 </div>
                 </>

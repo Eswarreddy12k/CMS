@@ -6,25 +6,35 @@ function Work() {
   return (
     <>
         <Header/>
+        
+        <div style={{transform:"scale(0.9)"}}>
+        <h1>Work</h1>
+        
         <form action='/uploadwork' method='post'>
-        <select className='form-control' name='workname' id='workname'>
+        <br/>
+          <input type='text' placeholder='Name' className='form-control' name='work_name'/>
+          <br/>
+          <input type='Number' placeholder='Mobile Number' className='form-control' name='work_mobile'/>
+          <br/>
+        <select className='form-control' name='work_work' id='workname'>
                 <option disabled selected>Select Job</option>
-                <option>Option1</option>
-                <option>Option2</option>
-                <option>Option3</option>
+                <option>Maid</option>
+                <option>Driver</option>
+                <option>Option4</option>
                 <option>Option4</option>
             </select>
             <br/>
-            <select className='form-control' name='areaname' id='areaname'>
+            <select className='form-control' id='areaname' name='work_prefered_area'>
                 <option disabled selected>Prefered area</option>
-                <option>Option1</option>
-                <option>Option2</option>
-                <option>Option3</option>
-                <option>Option4</option>
+                <option>Area1</option>
+                <option>Area2</option>
+                <option>Area3</option>
+                <option>Area4</option>
             </select>
             <br/>
-        <button type='submit'>Submit</button>
+        <button type='submit' className='btn btn-success'>Submit</button>
         </form>
+        </div>
         <Footer/>
     </>
   )
