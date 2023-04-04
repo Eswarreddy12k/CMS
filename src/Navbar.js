@@ -7,7 +7,7 @@ function Navbar(props) {
     const navigate=useNavigate();
     const [cuser11,setcuser11]=useState('')
 
-    axios.get("http://localhost:5000/isloggedin")
+    axios.get("https://cms-b.onrender.com/isloggedin")
     .then(data => setcuser11(data.data)).catch(error => console.log('abc'+error));
     console.log(cuser11);
 

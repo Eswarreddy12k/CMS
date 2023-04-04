@@ -8,7 +8,7 @@ import axios from 'axios'
 function EmergencyNumbers(props) {
     const row=[1,1,1,1,1,1,1,1]
     const [emer,setemer]=useState([])
-    axios.get("http://localhost:5000/getemergency/"+props.cuser)
+    axios.get("https://cms-b.onrender.com/getemergency/"+props.cuser)
     .then((data=>{setemer(data.data)})).catch(error => console.log('abc'+error));
     
   return (

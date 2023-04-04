@@ -8,7 +8,7 @@ import axios from 'axios'
 function HeadAdmin() {
   const [seru,setseru]=useState([])
     const getusers=()=>{
-        axios.get("/getseru")
+        axios.get("https://cms-b.onrender.com/getseru")
         .then(data => setseru(data.data)).catch(error => console.log('abc'+error));
       }
       useEffect(() => {

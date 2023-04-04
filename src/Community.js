@@ -36,7 +36,7 @@ function Community(props) {
   }catch{}
   
   const getresidents=()=>{
-    axios.get("http://localhost:5000/getresidents/"+props.cuser)
+    axios.get("https://cms-b.onrender.com/getresidents/"+props.cuser)
     .then(data => setneighbours(data.data)).catch(error => console.log('abc'+error));
   }
   useEffect(() => {
@@ -44,7 +44,7 @@ function Community(props) {
   },[])
 
   const getbills=async ()=>{
-    await axios.get("http://localhost:5000/getuserbills/"+props.cuser)
+    await axios.get("https://cms-b.onrender.com/getuserbills/"+props.cuser)
     .then(data => setbills(data.data)).catch(error => console.log('abc'+error));
   }
   useEffect(() => {
@@ -52,7 +52,7 @@ function Community(props) {
   },[])
 
   const getmanaging=()=>{
-    axios.get("http://localhost:5000/getmanaging/"+props.cuser)
+    axios.get("https://cms-b.onrender.com/getmanaging/"+props.cuser)
     .then(data => setmanaging(data.data)).catch(error => console.log('abc'+error));
   }
   useEffect(() => {

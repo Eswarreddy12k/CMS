@@ -10,22 +10,22 @@ function Admin() {
     const [servu,setservu]=useState([])
     const [servum,setservum]=useState([])
     const getusers=()=>{
-        axios.get("/getuserscadmin/"+window.location.href.slice(28))
+        axios.get("https://cms-b.onrender.com/getuserscadmin/"+window.location.href.slice(28+4))
         .then(data => setservu(data.data)).catch(error => console.log('abc'+error));
       }
       useEffect(() => {
         getusers();
       },[])
       const getmanage=()=>{
-        axios.get("/getmanagecadmin/"+window.location.href.slice(28))
+        axios.get("https://cms-b.onrender.com/getmanagecadmin/"+window.location.href.slice(28+4))
         .then(data => setservum(data.data)).catch(error => console.log('abc'+error));
       }
       useEffect(() => {
         getmanage();
       },[])
-  const postroute='/addannouncement/'+window.location.href.slice(28)
-  const postemer='/addemergencycontacts/'+window.location.href.slice(28)
-  const postmc='/addmanage/'+window.location.href.slice(28)
+  const postroute='https://cms-b.onrender.com/addannouncement/'+window.location.href.slice(28+4)
+  const postemer='https://cms-b.onrender.com/addemergencycontacts/'+window.location.href.slice(28+4)
+  const postmc='https://cms-b.onrender.com/addmanage/'+window.location.href.slice(28+4)
 
   return (
     

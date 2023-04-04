@@ -28,7 +28,7 @@ import EditUser from './EditUser';
 function App(props) {
   const [logx,setlogx]=useState(false)
   const [curruser,setcurruser]=useState(['abbllala'])
-  axios.get('/gethome',{
+  axios.get('https://cms-b.onrender.com/gethome',{
     headers:{
       "xaccesstoken":localStorage.getItem("token")
     }}).then((response)=>{
@@ -42,7 +42,7 @@ function App(props) {
   })
   const [prohome,setprohome]=useState('');
   axios
-    .get("http://localhost:5000/isloggedin")
+    .get("https://cms-b.onrender.com/isloggedin")
     .then(data => setprohome(data.data))
 
     .catch(error => console.log('abc'+error));

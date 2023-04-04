@@ -22,7 +22,7 @@ import axios from 'axios'
 
 function Home(props) {
   const [log,setlog]=useState(false)
-  axios.get('/gethome',{
+  axios.get('https://cms-b.onrender.com/gethome',{
     headers:{
       "xaccesstoken":localStorage.getItem("token")
     }}).then((response)=>{
@@ -48,7 +48,7 @@ function Home(props) {
   const getCustomersData = () => {
     
     axios
-    .get("http://localhost:5000/Dummylogins")
+    .get("https://cms-b.onrender.com/Dummylogins")
     .then(data => console.log(data))
     .catch(error => console.log('abc'+error));
     };
@@ -78,7 +78,7 @@ function Home(props) {
 
     const getvisitors=()=>{
       props.setuserid1(window.location.href.slice(27))
-    axios.get("http://localhost:5000/visitorsdb/"+window.location.href.slice(27)).then((response)=>{const allvisitors=response.data;setvisitors(allvisitors)}).catch(error => console.log('abc'+error));
+    axios.get("https://cms-b.onrender.com/visitorsdb/"+window.location.href.slice(27+4)).then((response)=>{const allvisitors=response.data;setvisitors(allvisitors)}).catch(error => console.log('abc'+error));
     return visitors;
   }
 
@@ -86,7 +86,7 @@ function Home(props) {
     getann();
   },[])
   const getann=()=>{
-    axios.get("http://localhost:5000/anndb/"+window.location.href.slice(27)).then((response)=>{setann(response.data)}).catch(error => console.log('abc'+error));
+    axios.get("https://cms-b.onrender.com/anndb/"+window.location.href.slice(27+4)).then((response)=>{setann(response.data)}).catch(error => console.log('abc'+error));
   }
   useEffect(() => {
     console.log(visitors);

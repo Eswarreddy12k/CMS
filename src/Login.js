@@ -22,7 +22,7 @@ function Login(props) {
       
       
       
-        axios.post('/homes',{
+        axios.post('https://cms-b.onrender.com/homes',{
           id:username,
           p:pw
         }).then((response)=>{

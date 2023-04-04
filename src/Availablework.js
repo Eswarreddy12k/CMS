@@ -8,7 +8,7 @@ function Availablework() {
     const [workdata,setworkdata]=useState([])
     console.log(window.location.href.slice(36))
 
-    axios.get("http://localhost:5000/availablework1/"+window.location.href.slice(36))
+    axios.get("https://cms-b.onrender.com/availablework1/"+window.location.href.slice(36+4))
     .then(data => setworkdata(data.data)).catch(error => console.log('abc'+error));
     
   return (

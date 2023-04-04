@@ -12,7 +12,7 @@ function Notifications(props) {
     console.log(props.cuser)
 
     const getusers=()=>{
-      axios.get("http://localhost:5000/getnotifications/"+props.cuser)
+      axios.get("https://cms-b.onrender.com/getnotifications/"+props.cuser)
       .then(data => setnotif1(data.data)).catch(error => console.log('abc'+error));
     }
     useEffect(() => {

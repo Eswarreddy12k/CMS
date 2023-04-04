@@ -13,7 +13,7 @@ function EditUser() {
   const [servx,setservx]=useState([])
 
   const getusersxy=()=>{
- axios.get('/gethome',{
+ axios.get('https://cms-b.onrender.com/gethome',{
     headers:{
       "xaccesstoken":localStorage.getItem("token")
     }}).then((response)=>{
@@ -28,7 +28,7 @@ function EditUser() {
 
   
     const getusersx=async()=>{
-        await axios.get("/getuserbyid/"+window.location.href.slice(31))
+        await axios.get("https://cms-b.onrender.com/getuserbyid/"+window.location.href.slice(31+4))
         .then(data =>{setservx(data.data);setuserxname(data.data.userx_name);console.log(data)} ).catch(error => console.log('abc'+error));
         
         

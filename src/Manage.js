@@ -9,7 +9,7 @@ function Manage() {
     const [complaint,setcomplaint]=useState([])
     const [serv,setserv]=useState([])
     const getusers=()=>{
-        axios.get("/getusers/"+window.location.href.slice(29))
+        axios.get("https://cms-b.onrender.com/getusers/"+window.location.href.slice(29+4))
         .then(data => setgusers(data.data)).catch(error => console.log('abc'+error));
       }
       useEffect(() => {
@@ -17,7 +17,7 @@ function Manage() {
       },[])
 
       const getcomplaint=()=>{
-        axios.get("/getcomplaint/"+window.location.href.slice(29))
+        axios.get("https://cms-b.onrender.com/getcomplaint/"+window.location.href.slice(29+4))
         .then(data => setcomplaint(data.data)).catch(error => console.log('unable to fetch complaints'+error));
       }
       useEffect(() => {
@@ -26,7 +26,7 @@ function Manage() {
 
 
       const getserv=()=>{
-        axios.get("/getservice/"+window.location.href.slice(29))
+        axios.get("https://cms-b.onrender.com/getservice/"+window.location.href.slice(29+4))
         .then(data => setserv(data.data)).catch(error => console.log('unable to fetch complaints'+error));
       }
       useEffect(() => {

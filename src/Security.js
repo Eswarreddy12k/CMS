@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 function Security() {
   const [vis,setvis]=useState([])
   const getusers=()=>{
-    axios.get("/getviss")
+    axios.get("https://cms-b.onrender.com/getviss")
     .then(data => setvis(data.data)).catch(error => console.log('abc'+error));
   }
   useEffect(() => {
