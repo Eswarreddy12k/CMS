@@ -78,7 +78,7 @@ function Home(props) {
 
     const getvisitors=()=>{
       props.setuserid1(window.location.href.slice(27))
-    axios.get("https://cms-b.onrender.com/visitorsdb/"+window.location.href.slice(27+4)).then((response)=>{const allvisitors=response.data;setvisitors(allvisitors)}).catch(error => console.log('abc'+error));
+    axios.get("https://cms-b.onrender.com/visitorsdb/"+window.location.href.slice(27+5)).then((response)=>{const allvisitors=response.data;setvisitors(allvisitors)}).catch(error => console.log('abc'+error));
     return visitors;
   }
 
