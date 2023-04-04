@@ -10,7 +10,7 @@ function Work() {
         <div style={{transform:"scale(0.9)"}}>
         <h1>Work</h1>
         
-        <form action='/uploadwork' method='post'>
+        <form action='https://cms-f.onrender.com/uploadwork' method='post'>
         <br/>
           <input type='text' placeholder='Name' className='form-control' name='work_name'/>
           <br/>
