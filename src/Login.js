@@ -85,7 +85,7 @@ function Login(props) {
             <div className="mb-4">
               <h3>Log In</h3>
               <p className="mb-4">
-                Sample Login Credentials-- User Id : Qwerty_123
+                Sample Login Credentials: Sample User Id : Qwerty_123
                 Password : Password@123
               </p>
             </div>

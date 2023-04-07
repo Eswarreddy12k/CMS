@@ -18,7 +18,7 @@ function Viewdocuments(props) {
           <div className='modal-main'>
               <h1>View Documents</h1>
               <embed
-    src={`./uploads/images/${cdoc}`}
+    src={`https://cms-b.onrender.com/uploads/images/${cdoc}`}
     type="application/pdf"
     frameBorder="0"
     scrolling="auto"

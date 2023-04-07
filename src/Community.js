@@ -131,7 +131,7 @@ function Community(props) {
               
               <div className='resident-box'>
                 
-                <img src={`./uploads/images/${managing[ii].managex_photo}`} alt='aa' className='rounded-circle'></img>
+                <img src={`https://cms-b.onrender.com/uploads/images/${managing[ii].managex_photo}`} alt='aa' className='rounded-circle'></img>
                 <br></br><br/>
                 <h4>{managing[ii].managex_name}</h4>
                 <h5>{managing[ii].managex_designation}</h5>
