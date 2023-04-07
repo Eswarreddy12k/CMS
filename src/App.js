@@ -55,7 +55,7 @@ function App(props) {
     const adminpath="/admin/"+curruser
     const managepath="/manage/"+curruser
 
-    console.log(homepath)
+    //console.log(homepath)
   return (
     
     

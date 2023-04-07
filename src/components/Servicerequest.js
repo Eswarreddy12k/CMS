@@ -7,7 +7,7 @@ function Servicerequest(props) {
     const [communityuser,setcommuser]=useState([])
     
     const getcomplaint=()=>{
-        axios.get("/userdet/"+props.cuser)
+        axios.get("https://cms-b.onrender.com/userdet/"+props.cuser)
         .then(data => setcommuser(data.data[0].userx_community)).catch(error => console.log('unable to fetch complaints'+error));
       }
       useEffect(() => {

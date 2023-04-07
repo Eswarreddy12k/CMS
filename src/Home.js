@@ -44,12 +44,12 @@ function Home(props) {
   catch{}
   
   const usi='111';
-  console.log(props.userid1);
+  //console.log(props.userid1);
   const getCustomersData = () => {
     
     axios
     .get("https://cms-b.onrender.com/Dummylogins")
-    .then(data => console.log(data))
+    .then(data => console.log('sucess'))
     .catch(error => console.log('abc'+error));
     };
   getCustomersData();
@@ -70,7 +70,7 @@ function Home(props) {
     const rows=[1,1,1,1,1];
     useEffect(()=>{
       const returnedvisitors=getvisitors();
-      console.log(returnedvisitors)
+      //console.log(returnedvisitors)
 
     },[]);
     
@@ -86,10 +86,10 @@ function Home(props) {
     getann();
   },[])
   const getann=()=>{
-    axios.get("https://cms-b.onrender.com/anndb/"+window.location.href.slice(27+4)).then((response)=>{setann(response.data)}).catch(error => console.log('abc'+error));
+    axios.get("https://cms-b.onrender.com/anndb/"+window.location.href.slice(27+5)).then((response)=>{setann(response.data)}).catch(error => console.log('abc'+error));
   }
   useEffect(() => {
-    console.log(visitors);
+    //console.log(visitors);
   }, [visitors]);
   
     
@@ -108,7 +108,7 @@ function Home(props) {
         
         <h1>Community Announcements</h1>
         <br></br>
-        {console.log(visitors)}
+        
         {ann.map((data,i)=>{
           return(
           <>
@@ -138,7 +138,7 @@ function Home(props) {
         }} 
         className="mySwiper"
       >
-        {console.log(visitors)}
+        
         {visitors.map((data,i)=>{
           
           return(

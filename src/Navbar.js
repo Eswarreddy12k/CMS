@@ -9,7 +9,7 @@ function Navbar(props) {
 
     axios.get("https://cms-b.onrender.com/isloggedin")
     .then(data => setcuser11(data.data)).catch(error => console.log('abc'+error));
-    console.log(cuser11);
+    //console.log(cuser11);
 
 
     function handleHome(){

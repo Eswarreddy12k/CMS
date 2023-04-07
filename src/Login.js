@@ -17,7 +17,7 @@ function Login(props) {
     
     
     const navigate = useNavigate();
-    console.log('aaa')
+    //console.log('aaa')
     const handleLogin=()=>{
       
       
@@ -85,8 +85,8 @@ function Login(props) {
             <div className="mb-4">
               <h3>Log In</h3>
               <p className="mb-4">
-                Lorem ipsum dolor sit amet elit. Sapiente sit aut eos
-                consectetur adipisicing.
+                Sample Login Credentials-- User Id : Qwerty_123
+                Password : Password@123
               </p>
             </div>
             

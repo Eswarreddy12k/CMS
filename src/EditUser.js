@@ -29,14 +29,14 @@ function EditUser() {
   
     const getusersx=async()=>{
         await axios.get("https://cms-b.onrender.com/getuserbyid/"+window.location.href.slice(31+4))
-        .then(data =>{setservx(data.data);setuserxname(data.data.userx_name);console.log(data)} ).catch(error => console.log('abc'+error));
+        .then(data =>{setservx(data.data);setuserxname(data.data.userx_name);} ).catch(error => console.log('abc'+error));
         
         
       }
       useEffect(() => {
         getusersx();
         
-        console.log(servx)
+        //console.log(servx)
       },[])
   return (
     <>

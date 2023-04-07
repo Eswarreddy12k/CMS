@@ -9,7 +9,7 @@ import { useEffect } from 'react'
 function Notifications(props) {
     const row=[1,1,1,1,1,1,1,1,1,1,1]
     const [notif1,setnotif1]=useState([])
-    console.log(props.cuser)
+    //console.log(props.cuser)
 
     const getusers=()=>{
       axios.get("https://cms-b.onrender.com/getnotifications/"+props.cuser)
