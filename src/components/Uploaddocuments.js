@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Uploaddocuments(props) {
-  const formroute='/uploaddoc/'+props.cuser
+  const formroute='https://cms-b.onrender.com/uploaddoc/'+props.cuser
     if(props.show){
         return (
           <div className='modal-main'>

@@ -6,13 +6,13 @@ function Complaintmodal(props) {
     const [communityuser,setcommuser]=useState([])
     
     const getcomplaint=()=>{
-        axios.get("/userdet/"+props.cuser)
+        axios.get("https://cms-b.onrender.com/userdet/"+props.cuser)
         .then(data => setcommuser(data.data[0].userx_community)).catch(error => console.log('unable to fetch complaints'+error));
       }
       useEffect(() => {
         getcomplaint();
       },[])
-      const formroute='/addcomplaint/'+props.cuser+"/"+communityuser
+      const formroute='https://cms-b.onrender.com/addcomplaint/'+props.cuser+"/"+communityuser
     if(props.show){
   return (
     <div className='modal-main'>

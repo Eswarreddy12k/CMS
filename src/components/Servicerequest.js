@@ -13,7 +13,7 @@ function Servicerequest(props) {
       useEffect(() => {
         getcomplaint();
       },[])
-    const formroute='/addsrequest/'+props.cuser+"/"+communityuser
+    const formroute='https://cms-b.onrender.com/addsrequest/'+props.cuser+"/"+communityuser
     if(props.show){
         return (
           <div className='modal-main'>

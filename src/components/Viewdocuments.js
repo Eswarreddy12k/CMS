@@ -4,7 +4,7 @@ import axios from 'axios';
 function Viewdocuments(props) {
   const [docs,setdocs]=useState(['NA'])
   const getdocs=()=>{
-    axios.get("http://localhost:5000/getdocuments/pdf/"+props.cuser)
+    axios.get("https://cms-b.onrender.com/getdocuments/pdf/"+props.cuser)
     .then(data => setdocs(data.data)).catch(error => console.log('abc'+error));
   }
   useEffect(() => {
@@ -12,7 +12,7 @@ function Viewdocuments(props) {
   },[])
   
   const [cdoc,setcdoc]=useState('')
-    console.log(`./uploads/images/${cdoc}`)
+    //console.log(`./uploads/images/${cdoc}`)
     if(props.show){
         return (
           <div className='modal-main'>
