@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 import './Generatepass.css'
 
 function Generatepass(props) {
-  const proute='/postvisitor/'+props.cuser
+  const proute='https://cms-b.onrender.com/work/postvisitor/'+props.cuser
   return (
     <>
     <Header />

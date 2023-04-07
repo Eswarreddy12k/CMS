@@ -13,6 +13,7 @@ function Navbar(props) {
 
 
     function handleHome(){
+        
         navigate('/home/'+cuser11)
     }
     function handleCommunity(){

@@ -29,19 +29,23 @@ function Login(props) {
           if(response.data.auth){
             localStorage.setItem("token",response.data.token)
             if(response.data.type==="cadmin"){
-              navigate('/admin/'+response.data.username)
+              window.location.replace('https://cms-f.onrender.com/admin/'+response.data.username);
+              //navigate('/admin/'+response.data.username)
             }
             else if(response.data.type==="admin"){
-              navigate('/headadmin')
+              window.location.replace('https://cms-f.onrender.com/headadmin/');
             }
             else if(response.data.type==="security"){
-              navigate('/security')
+              //navigate('/security')
+              window.location.replace('https://cms-f.onrender.com/security/');
             }
             else if(response.data.type==="manager"){
-              navigate('/manage/'+response.data.username)
+              //navigate('/manage/'+response.data.username)
+              window.location.replace('https://cms-f.onrender.com/manage/'+response.data.username);
             }
             else if(response.data.type==="user"){
-              navigate('/home/'+response.data.username)
+              window.location.replace('https://cms-f.onrender.com/home/'+response.data.username);
+              
 
             }
             
