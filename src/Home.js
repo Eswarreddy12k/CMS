@@ -49,7 +49,7 @@ function Home(props) {
     
     axios
     .get("https://cms-b.onrender.com/Dummylogins")
-    .then(data => console.log('sucess'))
+    .then()
     .catch(error => console.log('abc'+error));
     };
   getCustomersData();
